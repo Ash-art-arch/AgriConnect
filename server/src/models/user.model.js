@@ -24,6 +24,10 @@ const userSchema = new Schema({
         maxLength: [12, "password should not be greater than 12 characters!"],
         trim: true,
     },
+    role: {
+        type: Schema.Types.ObjectId,
+        ref: "Role"
+    },
     refreshToken: {
         type: String,
     }

@@ -19,7 +19,7 @@ const generateAccessAndRefreshTokens = async(userId) =>{
         return {accessToken, refreshToken}
 
     } catch (error) {
-        throw new Error(error?.message || "Something went wrong while generating referesh and access token")
+        throw new Error(error?.message || "Something went wrong while generating refresh and access token")
     }
 }
 
