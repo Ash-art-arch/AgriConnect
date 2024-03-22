@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,300..800;1,300..800&display=swap');
+.nav{
+    display: flex;
+    width: 100%;
+    height: 10%;
+    background-color: #547751;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 3rem;
+    font-family: 'Faustina', serif;
+    position: absolute;
+
+}
+.logo h1{
+    font-size: 2rem;
+    font-weight: 400;
+}
+.connect{
+    color: rgb(230, 230, 230);
+}
+.menu{
+    color: rgb(230, 230, 230);
+    width: 30%;
+    display: flex;
+    gap: 4rem;
+    font-size: 1.2rem;
+    /* position: relative; */
+}
+.menu a{
+    color: rgb(230, 230, 230);
+    text-decoration: none;
+    font-weight: 200;
+    position: relative;
+}
+.menu a::after{
+    content: "";
+    width: 0;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    background-color: #F3BD00;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+}
+.menu a:hover{
+    color: #F3BD00
+}
+.menu a:hover::after{
+    width: 100%;
+}
+.login button{
+    padding: .4rem ;
+    width: 6rem;
+    border-radius: 15px;
+    border: 1px solid #F3BD00;
+    background-color: transparent;
+    color: #F3BD00;
+    outline:none;
+}
+.login button:hover{
+    background-color: #F3BD00;
+    color: #fff;
+}
