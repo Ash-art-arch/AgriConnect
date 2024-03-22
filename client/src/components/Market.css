@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,300..800;1,300..800&family=Hurricane&display=swap');
+.market{
+    width: 100vw;
+    height: 100vh;
+    background-color: #121C11;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+.market h1{
+    font-family: "Hurricane", cursive;
+    color: white;
+    font-size: 64px;
+    letter-spacing: .5rem;
+    font-weight: 100;
+}
