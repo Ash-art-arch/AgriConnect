@@ -2,7 +2,17 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import logbg from "../assets/loginbg.svg"
 import "./login.css"
-const Login = () => {
+import { Link } from 'react-router-dom'
+const Login = ({role}) => {
+  // Get the current URL
+var currentURL = window.location.href;
+
+// Replace 'login' with 'register'
+var newURL = currentURL.replace('/login', '/register');
+
+// Redirect to the new URL
+
+
   return (
     <div className='login-main'>
         <Navbar/>
@@ -24,7 +34,7 @@ const Login = () => {
                 </div>
               
                 <button>Login</button>
-                <p>Don't have an account? <a href="/register" className='login-a'>Register</a></p>
+                <p>Don't have an account? <Link to={newURL} className='login-a'>Register</Link></p>
               </form>
                 </div>
         </div>
