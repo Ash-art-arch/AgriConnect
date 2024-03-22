@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,300..800;1,300..800&family=Hurricane&display=swap');
 .market{
     width: 100vw;
-    height: 100vh;
+   height: 150vh;
     background-color: #121C11;
     display: flex;
     align-items: center;
@@ -14,4 +14,35 @@
     font-size: 64px;
     letter-spacing: .5rem;
     font-weight: 100;
+}
+.filters{
+    width: 80%;
+    height: 10%;
+    border-radius: 40px;
+    background-color: #182616;
+    margin-top: 1.3rem;
+    display: flex;
+    padding: 1.2rem 4rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+}
+.filters p{
+    cursor: pointer;
+}
+.cards-holders{
+    width: 80%;
+    min-height: 80%;
+    background-color: #182616;
+    border-radius: 20px;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap:2rem;
+    padding: 2rem 3rem;
+    padding-left: 6rem;  
 }
