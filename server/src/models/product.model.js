@@ -16,3 +16,5 @@ const productSchema = new Schema({
         ref: "Category"
     }
 })
+
+export const Product = mongoose.model("Product", productSchema)
