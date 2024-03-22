@@ -44,7 +44,7 @@ form{
     width: 100%;
     margin-bottom: 1.2rem;
 }
- i{
+ form i{
     position: absolute;
     left: 15px;
     font-size: 1.3rem;
