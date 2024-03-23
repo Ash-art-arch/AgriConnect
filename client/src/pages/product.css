@@ -1,0 +1,264 @@
+nav {
+    position: absolute;
+    width: 100%;
+    height: 108px;
+    left: 0px;
+    top: 0px;
+
+    background: #547750;
+    border-radius: 3px;
+    display: flex;
+
+    align-items: center;
+    overflow: hidden;
+}
+
+.icon1{
+    margin-left: 32px;
+}
+
+.title-description{
+    position: absolute;
+    width: 803px;
+    height: 413px;
+    left: 63px;
+    top: 190px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.42);
+    border-radius: 29px;
+
+    display: flex;
+    justify-content: left;
+}
+
+.title{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 719px;
+    height: 30px;
+    left: 51px;
+    top: 38px;
+
+    background: #F1F1F1;
+    border: 0.4px solid #000000;
+    border-radius: 6px;
+
+}
+
+.description{
+
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 719px;
+    height: 237px;
+    left: 51px;
+    top: 135px;
+
+    background: #F1F1F1;
+    border: 0.3px solid #000000;
+    border-radius: 10px;
+
+}
+
+.title-name{
+    position: absolute;
+    width: 50px;
+    height: 16px;
+    left: 51px;
+    top: 14px;
+
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 126.83%;
+    /* or 16px */
+    letter-spacing: -0.01em;
+
+    color: #000000;
+
+}
+
+.description-name{
+    /* Description */
+
+    position: absolute;
+    width: 146px;
+    height: 22px;
+    left: 55px;
+    top: 104px;
+
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 126.83%;
+    /* or 16px */
+    letter-spacing: -0.01em;
+
+    color: #000000;
+
+
+}
+
+.media-box{
+
+    position: absolute;
+    width: 788px;
+    height: 236px;
+    left: 71px;
+    top: 636px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 19px;
+
+}
+
+.media-box h4{
+    /* Media */
+
+    position: absolute;
+    width: 146px;
+    height: 22px;
+    left: 48px;
+    top: 22px;
+
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 126.83%;
+    /* or 20px */
+    letter-spacing: -0.01em;
+
+    color: #000000;
+
+
+}
+
+.media-input{
+
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 631px;
+    height: 135px;
+    left: 78px;
+    top: 50px;
+
+    background: #FFFFFF;
+    border: 1px dashed #000000;
+    border-radius: 8px;
+
+}
+
+.pricing-box{
+
+    position: absolute;
+    width: 770px;
+    height: 129px;
+    left: 89px;
+    top: 896px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 2% 4%;
+
+}
+
+.pricing-box h4{
+    /* Pricing */
+
+    position: absolute;
+    width: 146px;
+    height: 22px;
+    left: 26px;
+    top: 7px;
+
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 126.83%;
+    /* or 20px */
+    letter-spacing: -0.01em;
+
+    color: #000000;
+
+
+}
+
+.price-label{
+    /* Price */
+
+    position: absolute;
+    width: 26px;
+    height: 11.49px;
+    left: 60px;
+    top: 31px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 9.67442px;
+    line-height: 126.83%;
+    /* or 12px */
+    letter-spacing: -0.01em;
+
+    color: #000000;
+
+
+}
+
+.price-box{
+
+    position: absolute;
+    width: 117px;
+    height: 15px;
+    left: 60px;
+    top: 44px;
+
+    background: #F1F1F1;
+    border-radius: 5px;
+
+}
+
+.compare-price-label{
+
+    position: absolute;
+    width: 85px;
+    height: 8px;
+    left: 275px;
+    top: 31px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 9.67442px;
+    line-height: 126.83%;
+    /* or 12px */
+    letter-spacing: -0.01em;
+
+    color: #000000;
+
+
+}
+
+.compare-price-box{
+
+    position: absolute;
+    width: 117px;
+    height: 15px;
+    left: 275px;
+    top: 44px;
+
+    background: #F1F1F1;
+    border-radius: 5px;
+
+
+}
