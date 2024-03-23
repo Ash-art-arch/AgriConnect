@@ -53,9 +53,8 @@ const Marketplace = () => {
             price={`Rs. ${detail.price}`} // Access price directly from detail object
           />
         ))}
+</div>
 
-      </div>
-    </div>
   );
 };
 
