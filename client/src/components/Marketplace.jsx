@@ -55,8 +55,8 @@ const Marketplace = () => {
         <Card productUrl={cotton} productName="Cotton" price="Rs. 1000"/>
         <Card productUrl={almonds} productName="Almonds" price="Rs. 20000"/>
         <Card productUrl={cocoa} productName="Cocoa" price="Rs. 2000"/>
-        <Card productUrl={soybeans} productName="Soybeans" price="Rs. 20000"/>
-        <Card productUrl={sugar} productName="Sugar" price="Rs. 20000"/>
+        <Card productUrl={soybeans} productName="Soybeans" price="Rs. 3000"/>
+        <Card productUrl={sugar} productName="Sugar" price="Rs. 1000"/>
         <Card productUrl={hay} productName="Hay" price="Rs. 200"/>
       </div>
     </div>
