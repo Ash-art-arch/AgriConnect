@@ -1,14 +1,9 @@
-import { asyncHandler } from "../utils/asyncHandler";
-import { Product } from "../models/product.model.js";
+import { asyncHandler } from "../utils/asyncHandler.js";
 import { Order } from "../models/order.model.js";
 import {ApiResponse} from "../utils/ApiResponse.js"
 
 const createOrder = asyncHandler(async (req, res) => {
-    // get details from frontend
-    // validate input data
-    // calculate order total
-    // save to the database
-
+    
     const {customerId, products} = req.body
 
     if(
