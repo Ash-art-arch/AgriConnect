@@ -42,7 +42,7 @@ const Marketplace = () => {
         <p>Fertilizer</p>
         <p>Crops</p>
       </div>
-
+    </div>
       <div className='cards-holders'>
 
         {details.map((detail, index) => (
