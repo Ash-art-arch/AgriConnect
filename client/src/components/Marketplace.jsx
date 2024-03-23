@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import "./Market.css";
 import Card from './Card';
-
+import rice from "../assets/rice.svg";
+import soybean from "../assets/soybeans.svg";
+import sugar from "../assets/sugar.svg";
+import urea from "../assets/urea.svg";
+import wheat from "../assets/wheat.svg";
+import cocoa from "../assets/cocoa.svg";
+import corn from "../assets/corn.svg";
+import oats from "../assets/oats.svg"
 const Marketplace = () => {
   const [details, setDetails] = useState([]);
-
 
   useEffect(() => {
     const fetchData = async () => {
@@ -12,7 +18,7 @@ const Marketplace = () => {
       const options = {
         method: 'GET',
         headers: {
-          'X-RapidAPI-Key': 'fe83efea23msh904ae7aea3b055dp1ffb9cjsn0bcecad5f696',
+          'X-RapidAPI-Key': '182f588771mshde8a3145d269422p1e4f26jsn893f20ef4954',
           'X-RapidAPI-Host': 'bloomberg-api.p.rapidapi.com'
         }
       };
@@ -20,19 +26,15 @@ const Marketplace = () => {
         const response = await fetch(url, options);
         const data = await response.json();
         const result = Object.values(data);
-        // Check if the fetched data is different from the current state
-        if (JSON.stringify(result) !== JSON.stringify(details)) {
-          setDetails(result);
-        }
+        setDetails(result);
+        console.log(result)
       } catch (error) {
         console.error(error);
       }
     };
-    
 
     fetchData();
-  }, []); // Empty dependency array means the effect runs only once on component mount
-
+  }, []); 
   return (
     <div className='market' id='market'>
       <h1>MarketPlace</h1>
@@ -42,20 +44,42 @@ const Marketplace = () => {
         <p>Fertilizer</p>
         <p>Crops</p>
       </div>
-    </div>
-      <div className='cards-holders'>
 
-        {details.map((detail, index) => (
+      <div className='cards-holders'>
+        {details.slice(0, 9).map((detail, index) => (
           <Card
             key={index}
-            productUrl={detail.url} // Access url directly from detail object
-            productName={detail.name} // Access name directly from detail object
-            price={`Rs. ${detail.price}`} // Access price directly from detail object
+            productUrl={getImageUrl(detail.name)}
+            productName={detail.name.split(" ")[0]}
+            price={`Rs. ${detail.Price}`}
           />
         ))}
-</div>
-
+      </div>
+    </div>
   );
+};
+
+const getImageUrl = (productName) => {
+  switch (productName.split(" ")[0]) {
+    case "Rice":
+      return rice;
+    case "Soybean":
+      return soybean;
+    case "Sugar":
+      return sugar;
+    case "Urea":
+      return urea;
+    case "Wheat":
+      return wheat;
+    case "Cocoa":
+      return cocoa;
+    case "Corn":
+      return corn;
+      case "Oats":
+        return oats;
+    default:
+      return rice;
+  }
 };
 
 export default Marketplace;

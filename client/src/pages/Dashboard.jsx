@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import "./dashboard.css";
 import spend from "../assets/spend.svg";
 import visit from "../assets/visit.svg";
-
+import chart from "../assets/chart.svg"
 const Dashboard = () => {
     const [news,setNews]=useState([])
     const [index,setIndex]=useState(0)
@@ -12,7 +12,7 @@ const Dashboard = () => {
             const options = {
                 method: 'GET',
                 headers: {
-                    'X-RapidAPI-Key': 'fe83efea23msh904ae7aea3b055dp1ffb9cjsn0bcecad5f696',
+                    'X-RapidAPI-Key': '182f588771mshde8a3145d269422p1e4f26jsn893f20ef4954',
                     'X-RapidAPI-Host': 'news67.p.rapidapi.com'
                 }
             };
@@ -65,9 +65,7 @@ const Dashboard = () => {
                     DashBoard
                 </h1>
                 <div className='upper'>
-                    <div className='chart'>
-
-                    </div>
+                    <div className='charts' style={{ backgroundImage: `url(${chart})` }}></div>
                     <div className='tally'>
                         <div className='spend'>
                             <section className='earn'> 
