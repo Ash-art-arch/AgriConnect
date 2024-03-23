@@ -27,7 +27,7 @@ const News = () => {
 
     return (
         <>
-            <div>News</div>
+            <div>{news.map((news) => <div>{news}</div>)}</div>
         </>
     )
 }

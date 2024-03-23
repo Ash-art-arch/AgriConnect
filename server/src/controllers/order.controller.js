@@ -1,4 +1,5 @@
 import { asyncHandler } from "../utils/asyncHandler.js";
+import { Product } from "../models/product.model.js";
 import { Order } from "../models/order.model.js";
 import {ApiResponse} from "../utils/ApiResponse.js"
 
