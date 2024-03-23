@@ -24,8 +24,10 @@ app.use(express.urlencoded({
 
 import { userRouter } from "./routes/user.routes.js"
 import { orderRouter } from "./routes/order.routes.js"
+import { productRouter } from "./routes/product.routes.js"
 
 app.use("/users", userRouter)
 app.use("/orders", orderRouter)
+app.use("/products", productRouter)
 
 export default app

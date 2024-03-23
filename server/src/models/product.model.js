@@ -12,8 +12,20 @@ const productSchema = new Schema({
         trim: true
     },
     category:{
+        type: String,
+        default: "Mischellaneous"
+    },
+    description:{
+        type: String,
+        required: true,
+    },
+    stock:{
+        type: Number,
+        required: true
+    },
+    farmer: {
         type: Schema.Types.ObjectId,
-        ref: "Category"
+        ref: "User"
     }
 })
 
