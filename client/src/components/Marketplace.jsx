@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import "./Market.css";
 import Card from './Card';
-import rice from "../assets/rice.svg";
-import corn from "../assets/corn.svg";
-import wheat from "../assets/wheat.svg";
-import mead from "../assets/mead.svg";
-import almonds from "../assets/almonds.svg";
-import urea from "../assets/urea.svg";
 
 const Marketplace = () => {
   const [details, setDetails] = useState([]);
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -21,7 +16,6 @@ const Marketplace = () => {
           'X-RapidAPI-Host': 'bloomberg-api.p.rapidapi.com'
         }
       };
-    
       try {
         const response = await fetch(url, options);
         const data = await response.json();
@@ -50,6 +44,7 @@ const Marketplace = () => {
       </div>
 
       <div className='cards-holders'>
+
         {details.map((detail, index) => (
           <Card
             key={index}
@@ -58,6 +53,7 @@ const Marketplace = () => {
             price={`Rs. ${detail.price}`} // Access price directly from detail object
           />
         ))}
+
       </div>
     </div>
   );
