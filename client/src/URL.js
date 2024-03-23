@@ -1,1 +1,0 @@
-const URL="https://api.ceda.ashoka.edu.in/agmarknet/"
