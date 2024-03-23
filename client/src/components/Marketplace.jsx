@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Market.css"
 import Card from './Card'
+import rice from "../assets/rice.svg"
 const Marketplace = () => {
   return (
     <div className='market' id='market'>
@@ -13,15 +14,15 @@ const Marketplace = () => {
         </div>
 
       <div className='cards-holders'>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
+        <Card productUrl={rice} productName="rice" price="Rs. 20000"/>
+        <Card productUrl={rice} productName="rice" price="Rs. 20000"/>
+        <Card productUrl={rice} productName="rice" price="Rs. 20000"/>
+        <Card productUrl={rice} productName="rice" price="Rs. 20000"/>
+        <Card productUrl={rice} productName="rice" price="Rs. 20000"/>
+        <Card productUrl={rice} productName="rice" price="Rs. 20000"/>
+        <Card productUrl={rice} productName="rice" price="Rs. 20000"/>
+        <Card productUrl={rice} productName="rice" price="Rs. 20000"/>
+        <Card productUrl={rice} productName="rice" price="Rs. 20000"/>
       </div>
     </div>
   )
