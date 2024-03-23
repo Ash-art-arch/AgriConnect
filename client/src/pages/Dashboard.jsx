@@ -5,13 +5,14 @@ import visit from "../assets/visit.svg";
 
 const Dashboard = () => {
     const [news,setNews]=useState([])
+    const [index,setIndex]=useState(0)
     useEffect(() => {
         const fetchData = async () => {
             const url = 'https://news67.p.rapidapi.com/v2/topic-search?languages=en&search=agriculture';
             const options = {
                 method: 'GET',
                 headers: {
-                    'X-RapidAPI-Key': '5a4e38b12fmshba8d73cf946dbacp157d8cjsn331398f67988',
+                    'X-RapidAPI-Key': 'fe83efea23msh904ae7aea3b055dp1ffb9cjsn0bcecad5f696',
                     'X-RapidAPI-Host': 'news67.p.rapidapi.com'
                 }
             };
@@ -20,23 +21,35 @@ const Dashboard = () => {
                 const response = await fetch(url, options);
                 const result = await response.text();
                 const parsedResult = JSON.parse(result);
-                console.log(result);
-                setNews(result)
+                // console.log(result);
+                console.log(parsedResult.news)
+                setNews(parsedResult.news)
+                console.log(news);
             } catch (error) {
                 console.error(error);
             }
         };
 
-        fetchData(); // Call the async function directly inside useEffect
-    }, []); // Empty dependency array means the effect runs only once on component mount
+        fetchData();
+    
 
+    }, []); 
+    useEffect(() => {
+        if (news.length > 0) {
+            const interval = setInterval(() => {
+                setIndex(prevIndex => (prevIndex + 1) % news.length);
+            }, 5000);
+
+            return () => clearInterval(interval);
+        }
+    }, [news]);
     return (
         <div className='dashboard'>
             <div className='dashboard-nav'>
                 <div className='top'>
                    <i className="ri-menu-line"></i>
-                    <div className='pfp'></div>
                 </div>
+                    <div className='pfp'></div>
                 <div className='middle'>
                     <a href="">Dashboard</a>
                     <a href="">Loans</a>
@@ -77,11 +90,23 @@ const Dashboard = () => {
                         <div></div>
                     </div>
                 </div>
+             
+                {news.length > 0 && (
                 <div className='lower'>
                     <div className='news'>
                         <h1>Todays News</h1>
+                        <div className='news-holder'>
+                            <div className='news-text'>
+                            <h6 className='news-title'>{news.length>0&&news[index % news.length].Title}</h6>
+                            <p className='summary'>{news.length>0&&news[index % news.length].Summary}</p>
+                            </div>
+                            <div className='news-img' style={{ backgroundImage: `url(${news.length>0&&news[index % news.length].Image})` }}></div>
+                        </div>
+
                     </div>
                 </div>
+            )}
+        
             </div>
         </div>
     );
