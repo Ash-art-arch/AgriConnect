@@ -4,11 +4,7 @@ import { Order } from "../models/order.model.js";
 import {ApiResponse} from "../utils/ApiResponse.js"
 
 const createOrder = asyncHandler(async (req, res) => {
-    // get details from frontend
-    // validate input data
-    // calculate order total
-    // save to the database
-
+    
     const {customerId, products} = req.body
 
     if(
@@ -86,10 +82,10 @@ const deleteOrder = asyncHandler(async (req, res) => {
 
         await order.remove()
 
-        res.status(204).end();
+        return res.status(204).end();
     } catch (error) {
         console.error("Error while deleting order: ", error)
-        res.status(500).json({error : "Internal server error"})
+        return res.status(500).json({error : "Internal server error"})
     }
 })
 

@@ -26,5 +26,17 @@ app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).send('Something broke!');
 });
+app.use(express.urlencoded({
+    extended: true,
+    limit : "16kb"
+}))
 
-export default app;
+
+import { productRouter } from "./routes/product.routes.js"
+
+app.use("/users", userRouter)
+app.use("/orders", orderRouter)
+app.use("/products", productRouter)
+
+export default app
+
