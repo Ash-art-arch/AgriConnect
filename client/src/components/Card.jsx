@@ -4,7 +4,7 @@ const Card = ({productUrl, productName, price}) => {
   return (
     <div className='card'>
       <div className='img' style={{ backgroundImage: `url(${productUrl})` }}></div>
-      <div className='title'>
+      <div className='title-card'>
         <p>
           {productName}
         </p>

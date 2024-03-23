@@ -18,7 +18,7 @@ const Marketplace = () => {
       const options = {
         method: 'GET',
         headers: {
-          'X-RapidAPI-Key': '182f588771mshde8a3145d269422p1e4f26jsn893f20ef4954',
+          'X-RapidAPI-Key': 'a91d7912damsh060d912d1b08aa9p1b464bjsned537ed89d43',
           'X-RapidAPI-Host': 'bloomberg-api.p.rapidapi.com'
         }
       };

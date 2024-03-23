@@ -12,7 +12,7 @@ const Dashboard = () => {
             const options = {
                 method: 'GET',
                 headers: {
-                    'X-RapidAPI-Key': '182f588771mshde8a3145d269422p1e4f26jsn893f20ef4954',
+                    'X-RapidAPI-Key': 'a91d7912damsh060d912d1b08aa9p1b464bjsned537ed89d43',
                     'X-RapidAPI-Host': 'news67.p.rapidapi.com'
                 }
             };
@@ -30,7 +30,7 @@ const Dashboard = () => {
             }
         };
 
-        fetchData();
+        // fetchData();
     
 
     }, []); 
@@ -53,7 +53,7 @@ const Dashboard = () => {
                 <div className='middle'>
                     <a href="">Dashboard</a>
                     <a href="">Loans</a>
-                    <a href="">Add Items</a>
+                    <a href="/products">Add Items</a>
                     <a href="">Get Logistic Support</a>
                 </div>
                 <div className='bottom'>
