@@ -34,14 +34,10 @@ const Navbar = () => {
             <a href="">Service</a>
          </div>
         <div className='login'>
-           {username&&
-           
-           <button onClick={() =>handleLogout()}>Log Out</button>
-           } 
-           {!username&&
+    
+      
            <button onClick={() => window.location.href = "/login"}>Log In</button>
            
-           }
         </div>
     </div>
   )
